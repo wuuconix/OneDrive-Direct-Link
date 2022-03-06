@@ -1,0 +1,44 @@
+html {
+    height: 100%;
+}
+body {
+    width: 90%;
+    height: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgb(153,149,213);
+    background: linear-gradient(165deg, rgba(153,149,213,1) 0%, rgba(0,159,255,1) 100%);
+}
+
+input[placeholder] {
+    width: 90%;
+    border-radius: 20px;
+    margin-top: 50px;
+    height: 32px;
+    border: 5px solid plum;
+    font-family: "EB Garamond";
+    height: 50px;
+    font-size: x-large;
+}
+
+.hide {
+    display: none;
+}
+
+input[type="checkbox"] {
+    zoom: 2.5;
+    margin-right: 10px;
+}
+
+p {
+    font-family: 'Rock Salt', cursive;
+    color: black;
+    font-weight: bold;
+}
+
+a {
+    font-family: Lobster;
+    font-size: xx-large;
+    text-decoration: none;
+    color: slateblue;
+}
