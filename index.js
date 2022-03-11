@@ -45,15 +45,15 @@ input.addEventListener("keypress", (e) => {
                 else { 
                     switch (type) {
                         case ":v:":
-                            displayLink(`https://v.conix.tk/?url=https://1drv.conix.tk/${shareCode}`)
+                            displayLink(`https://v.conix.tk/?c=${shareCode}`)
                             notice(`${username} 你好\n视频预览链接已经复制到您的剪切板`)
                             break
                         case ":i:":
-                            displayLink(`https://p.conix.tk/?url=https://1drv.conix.tk/${shareCode}`)
+                            displayLink(`https://p.conix.cf/?c=${shareCode}`)
                             notice(`${username} 你好\n图片预览链接已经复制到您的剪切板`)
                             break
                         case ":u:":
-                            displayLink(`https://p.conix.tk/?url=https://1drv.conix.tk/${shareCode}`)
+                            displayLink(`https://p.conix.cf/?c=${shareCode}`)
                             notice(`${username} 你好\n音频预览链接已经复制到您的剪切板`)
                             break
                     }
@@ -71,15 +71,15 @@ input.addEventListener("keypress", (e) => {
                         else { //用于需要预览
                             switch (type) {
                                 case ":v:":
-                                    displayLink(`https://v.conix.tk/?url=https://1drv.conix.tk/${shortCode}`)
+                                    displayLink(`https://v.conix.tk/?c=${shortCode}`)
                                     notice(`${username} 你好\n视频预览链接已经复制到您的剪切板`)
                                     break
                                 case ":i:":
-                                    displayLink(`https://p.conix.tk/?url=https://1drv.conix.tk/${shortCode}`)
+                                    displayLink(`https://p.conix.cf/?c=${shortCode}`)
                                     notice(`${username} 你好\n图片预览链接已经复制到您的剪切板`)
                                     break
                                 case ":u:":
-                                    displayLink(`https://p.conix.tk/?url=https://1drv.conix.tk/${shortCode}`)
+                                    displayLink(`https://p.conix.cf/?c=${shortCode}`)
                                     notice(`${username} 你好\n音频预览链接已经复制到您的剪切板`)
                                     break
                             }
@@ -89,24 +89,22 @@ input.addEventListener("keypress", (e) => {
         }
         else { //其他人使用或者没有勾选custom
             let directLink = `https://${domain}/personal/${username}/_layouts/15/download.aspx?share=${shareCode}`
-            if (checkbox2.checked == false || !previewList.includes(type)) {
+            if (checkbox3.checked == false || !previewList.includes(type)) {
                 displayLink(directLink)
                 notice(`${username} 你好\n直链已经复制到您的剪切板`)
             }
             else {
-                displayLink(`https://v.conix.tk/?url=${directLink}`)
-                notice(`${username} 你好\n视频预览链接已经复制到您的剪切板`)
                 switch (type) {
                     case ":v:":
                         displayLink(`https://v.conix.tk/?url=${directLink}`)
                         notice(`${username} 你好\n视频预览链接已经复制到您的剪切板`)
                         break
                     case ":i:":
-                        displayLink(`https://p.conix.tk/?url=${directLink}`)
+                        displayLink(`https://p.conix.cf/?url=${directLink}`)
                         notice(`${username} 你好\n图片预览链接已经复制到您的剪切板`)
                         break
                     case ":u:":
-                        displayLink(`https://p.conix.tk/?url=${directLink}`)
+                        displayLink(`https://p.conix.cf/?url=${directLink}`)
                         notice(`${username} 你好\n音频预览链接已经复制到您的剪切板`)
                         break
                 }
